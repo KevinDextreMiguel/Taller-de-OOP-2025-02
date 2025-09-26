@@ -1,13 +1,13 @@
 import math
  
-class Cono:
+class TroncoCono:
   def __init__(self,radio_mayor,radio_menor,altura):
     self.radio_mayor = radio_mayor
     self.radio_menor = radio_menor
     self.altura = altura
   
   def calcular_generatriz(self):
-    generatriz = (self.altura ** 2 + (self.radio_mayor - self.radio_menor)) ** 0.5
+    generatriz = (self.altura ** 2 + (self.radio_mayor - self.radio_menor)**2) ** 0.5
     return generatriz
   
   def calcular_area(self):
@@ -18,8 +18,8 @@ class Cono:
     volumen = math.pi * self.altura / 3 * (self.radio_mayor ** 2 + self.radio_menor ** 2 + self.radio_mayor * self.radio_menor)
     print(f"El volumen es: {volumen}")
 
-#Craer Objeto
-objeto_cono1 = Cono(8,3,10)
-objeto_cono1.calcular_generatriz()
-objeto_cono1.calcular_area()
-objeto_cono1.calcular_volumen()
+#Crear Objeto
+objeto_TroncoCono = TroncoCono(8,3,10)
+objeto_TroncoCono.calcular_generatriz()
+objeto_TroncoCono.calcular_area()
+objeto_TroncoCono.calcular_volumen()
